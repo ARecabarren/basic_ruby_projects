@@ -12,4 +12,8 @@ class Computer
         @files[filename] = time
         puts "#{filename} created by #{@username} at #{time}"
     end
+
+    def Computer.get_users
+        @@users
+    end
 end
