@@ -16,6 +16,13 @@ class Computer
     def Computer.get_users
         @@users
     end
+
+    def change_password(new_password)
+        @@users[@username] = new_password
+    end
 end
 
 my_computer = Computer.new('manos', 'gin010203#')
+puts Computer.get_users
+my_computer.change_password('1234')
+puts Computer.get_users
