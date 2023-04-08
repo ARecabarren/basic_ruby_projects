@@ -17,3 +17,5 @@ class Computer
         @@users
     end
 end
+
+my_computer = Computer.new('manos', 'gin010203#')
