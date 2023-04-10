@@ -13,6 +13,11 @@ class Account
         pin_number == pin ? (puts "Withdrew #{amount}. New balance: $#{@balance}.") : (puts pin_error)
     end
 
+    def deposit(amount)
+        @balance += amount
+        puts "Balance: $#{@balance}."
+    end
+
     private
     def pin
         @pin = 1234
@@ -24,3 +29,4 @@ class Account
 end
 
 checking_account = Account.new('Alvaro',1300)
+checking_account.deposit(1003)
