@@ -1,7 +1,10 @@
 class MyCar
     attr_accessor :color
-    attr_reader :year
-    attr_reader :current_speed
+    attr_reader :year, :current_speed, :model
+
+    def self.gas_mileage(liters, kilometers)
+        puts "#{kilometers/liters} kilometers per gas liter"
+    end
 
     def initialize(year, color, model)
         @year = year
@@ -29,8 +32,11 @@ class MyCar
         "Your new #{new_color} tone is A M A Z I N G"
     end
 
-
+    def  to_s
+        puts "A nice #{year} #{model} in #{color}"
+    end
 end
+
 
 
 chinito = MyCar.new(2001,'White', 'DFM')
@@ -40,3 +46,4 @@ puts chinito.brake
 puts chinito.shut_off
 puts chinito.color
 puts chinito.spray_paint('grey')
+puts chinito.to_s
