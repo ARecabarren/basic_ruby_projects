@@ -12,4 +12,14 @@ describe "#caeser_cipher" do
         ciphed = caeser_cipher(to_code, -5)
         expect(ciphed).to eql('Zz')
     end
+    it "Shift with big positive index" do
+        to_code = 'Zz'
+        ciphed = caeser_cipher(to_code, 83)
+        expect(ciphed).to eql('Ee')
+    end
+    it "Shift with big negative index" do
+        to_code = 'Ee'
+        ciphed = caeser_cipher(to_code, -83)
+        expect(ciphed).to eql('Zz')
+    end
 end
